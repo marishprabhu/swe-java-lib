@@ -2444,7 +2444,7 @@ err.println("Use option -locales to list all available Locales.");
     // house == house topo == lon lat house_system; split everything:
     if (a.htopoS != null) {
           try {
-            String[] ar_htopo = a.htopoS.split("[^0-9a-zA-Z" + numIFracSeparator + "]");
+            String[] ar_htopo = a.htopoS.split("[^0-9a-zA-Z\\-" + numIFracSeparator + "]");
             if (ar_htopo.length != 3 || ar_htopo[2].length() != 1) {
               throw new NumberFormatException();
             }
